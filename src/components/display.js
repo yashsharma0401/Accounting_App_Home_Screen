@@ -80,12 +80,12 @@ const Display = () => {
       setModalOpen(false);
     };
   
-    const handleModalSubmit = (event) => {
-      event.preventDefault();
-      // Do something with the form data, e.g., save to state or send to API.
-      console.log('Form Data:', formData);
-      handleModalClose();
-    };
+    // const handleModalSubmit = (event) => {
+    //   event.preventDefault();
+    //   // Do something with the form data, e.g., save to state or send to API.
+    //   console.log('Form Data:', formData);
+    //   handleModalClose();
+    // };
 
   return (
     <div>
@@ -326,6 +326,7 @@ const Display = () => {
         top: '261px',
         left: '130px',
       }}
+      name="name"
       value={formData.name}
   onChange={handleInputChange}
     />
@@ -346,6 +347,7 @@ const Display = () => {
     <input
       type="text"
       placeholder="Enter 10 digit number"
+      name="phoneNumber"
       style={{
         width: '296px',
         height: '44px',
@@ -400,6 +402,7 @@ const Display = () => {
         top: '409px',
         left: '130px',
       }}
+      name="address"
       value={formData.address}
   onChange={handleInputChange}
     />
@@ -437,6 +440,7 @@ const Display = () => {
         top: '409px',
         left: '496px',
       }}
+      name="city"
       value={formData.city}
   onChange={handleInputChange}
     />
@@ -474,6 +478,7 @@ const Display = () => {
         top: '409px',
         left: '864px',
       }}
+      name="pincode"
       value={formData.pincode}
   onChange={handleInputChange}
     />
@@ -511,6 +516,7 @@ const Display = () => {
         top: '556px',
         left: '130px',
       }}
+      name="gstin"
       value={formData.gstin}
   onChange={handleInputChange}
     />
@@ -548,6 +554,7 @@ const Display = () => {
         top: '556px',
         left: '496px',
       }}
+      name="panNumber"
       value={formData.panNumber}
   onChange={handleInputChange}
     />
@@ -585,6 +592,7 @@ const Display = () => {
         top: '556px',
         left: '864px',
       }}
+      name="aadhar"
       value={formData.aadhar}
   onChange={handleInputChange}
     />
@@ -1116,8 +1124,8 @@ const Display = () => {
 </div>
  {partyData.map((data, index) => (
   <div key={index} style={{
-    width: '1309px',
-    height: '57px',
+    // width: '1309px',
+    // height: '57px',
     flexShrink: 0,
     borderRadius: '15px 15px 0px 0px',
     border: '1px solid #D1CCF6',
@@ -1133,13 +1141,13 @@ const Display = () => {
     lineHeight: 'normal',
     textTransform: 'uppercase',
   }}>
-    <span style={{ top: '19px', left: '21px', position: 'absolute' }}>{index + 1}</span>
-    <span style={{ top: '19px', left: '166px', position: 'absolute' }}>{data.name}</span>
-    <span style={{ top: '19px', left: '441px', position: 'absolute' }}>{data.phoneNumber}</span>
-    <span style={{ top: '19px', left: '675px', position: 'absolute' }}>{data.gold}</span> {/* Populate Gold data here */}
-    <span style={{ top: '19px', left: '846px', position: 'absolute' }}>{data.silver}</span> {/* Populate Silver data here */}
-    <span style={{ top: '19px', left: '1015px', position: 'absolute' }}>{data.amount}</span> {/* Populate Amount data here */}
-    <span style={{ top: '19px', left: '1179px', position: 'absolute' }}>{/* Add Actions data here */}</span>
+    <span style={{ top: '139px', left: '21px', position: 'absolute' }}>{index + 1}</span>
+    <span style={{ top: '139px', left: '166px', position: 'absolute' }}>{data.name}</span>
+    <span style={{ top: '139px', left: '441px', position: 'absolute' }}>{data.phoneNumber}</span>
+    <span style={{ top: '139px', left: '675px', position: 'absolute' }}>{data.gold}</span> {/* Populate Gold data here */}
+    <span style={{ top: '139px', left: '846px', position: 'absolute' }}>{data.silver}</span> {/* Populate Silver data here */}
+    <span style={{ top: '139px', left: '1015px', position: 'absolute' }}>{data.amount}</span> {/* Populate Amount data here */}
+    <span style={{ top: '139px', left: '1179px', position: 'absolute' }}>{/* Add Actions data here */}</span>
   </div>
 ))}
 
